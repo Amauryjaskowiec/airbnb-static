@@ -21,22 +21,23 @@ title: Le Wagon Middleman boilerplate
       <div class="container">
         <div class="row">
           <div class="col-md-3">
-            <img src="images/globe.png">
+            <!-- <img src="images/globe.png"> -->
+            <%= image_tag 'globe.png' %>
             <h2>Discover the world</h2>
             <p>The earth is your new home.</p>
           </div>
           <div class="col-md-3">
-            <img src="images/dollar.png">
+            <%= image_tag 'dollar.png' %>
             <h2>Pay online</h2>
             <p>No cash issues anymore.</p>
           </div>
           <div class="col-md-3">
-            <img src="images/beer.png">
+            <%= image_tag 'beer.png' %>
             <h2>Meet people</h2>
             <p>Discover new culture and lifestyle.</p>
           </div>
           <div class="col-md-3">
-            <img src="images/heart.png">
+            <%= image_tag 'heart.png' %>
             <h2>Share and love</h2>
             <p>Join a community you will love.</p>
           </div>
@@ -49,42 +50,49 @@ title: Le Wagon Middleman boilerplate
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-brussels.jpeg');">
-              <div class="card-category">Brussels</div>
-              <div class="card-description">
-                <h2>Seb's home</h2>
-                <p>Lovely house</p>
+            <% link_to 'team.html' do %>
+              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-brussels.jpeg');">
+                <div class="card-link"></div>
+                <div class="card-category">Brussels</div>
+                <div class="card-description">
+                  <h2>Seb's home</h2>
+                  <p>Lovely house</p>
+                </div>
+                  <%= image_tag 'seb.jpg', class: 'card-user avatar' %>
               </div>
-              <img class="card-user avatar" src="images/seb.jpg">
-              <a class="card-link" href="#" ></a>
             </div>
-          </div>
+          <% end %>
           <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-paris.jpg');">
-              <div class="card-category">Paris</div>
-              <div class="card-description">
-                <h2>Anne's home</h2>
-                <p>Charming room with patio</p>
+            <% link_to 'team.html' do %>
+              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-paris.jpg');">
+                <div class="card-link"></div>
+                <div class="card-category">Paris</div>
+                <div class="card-description">
+                  <h2>Anne's home</h2>
+                  <p>Charming room with patio</p>
+                </div>
+                <%= image_tag 'anne.jpg', class: 'card-user avatar' %>
               </div>
-              <img class="card-user avatar" src="images/anne.jpg">
-              <a class="card-link" href="#" ></a>
             </div>
-          </div>
+          <% end %>
           <div class="col-xs-12 col-sm-4">
-            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-london.jpeg');">
-              <div class="card-category">London</div>
-              <div class="card-description">
-                <h2>Romain's home</h2>
-                <p>Beautiful house</p>
+            <% link_to 'team.html' do %>
+              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('images/card-london.jpeg');">
+                <div class="card-link"></div>
+                <div class="card-category">London</div>
+                <div class="card-description">
+                  <h2>Romain's home</h2>
+                  <p>Beautiful house</p>
+                </div>
+                <%= image_tag 'romain.jpeg', class: 'card-user avatar' %>
               </div>
-              <img class="card-user avatar" src="images/romain.jpeg">
-              <a class="card-link" href="#" ></a>
             </div>
-          </div>
+          <% end %>
         </div>
       </div>
     </div>
     <!-- Your newsletter code -->
+    <%= link_to "Meet the team", "team.html", class: "btn btn-primary" %>
     <div class="form">
       <h2>Get news from us!</h2>
       <p>Leave us your mail and get news from us</p>
